@@ -1,6 +1,9 @@
 module "ASG" {
   source              = "../"
   region              = "${var.region}"
+  max_size            = "${var.max}"
+  min_size            = "${var.min}"
+  desired_capacity    = "${var.desired_capacity}"
   cidr_block          = "${var.cidr_block }"
   private_cidr_block1 = "${var.private_cidr_block1}"
   private_cidr_block2 = "${var.private_cidr_block2}"
