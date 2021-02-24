@@ -10,9 +10,9 @@ resource "aws_autoscaling_group" "WP" {
     aws_subnet.public3.id,
   ]
 
-  desired_capacity = 1
-  min_size         = 1
-  max_size         = 4
+  desired_capacity = "var.desired_capacity"
+  min_size         = "var.min_size"
+  max_size         = "var.max_size"
 
 }
 
